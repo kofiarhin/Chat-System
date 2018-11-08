@@ -1,0 +1,149 @@
+@import "normalize"
+@import "base"
+
+h1, h2, h3, h4, h5, h6, p
+	margin: 0
+	padding: 0
+
+//general styling
+
+.title
+	margin-bottom: 20px
+	font:
+		size: 30px
+		weight: 300
+
+.sub-title
+	margin-bottom: 20px
+	font:
+		size: 25px
+		weight: 300
+
+
+//header styling
+
+.header-wrapper
+	width: 960px
+	max-width: 90%
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 20px 0px
+	nav
+		display: flex
+		align-items: center
+	nav a
+		margin-left: 20px
+	nav .user-face
+		display: inline-block
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		background:
+			size: cover
+			position: center
+
+		
+.face	
+	width: 80%
+	padding-top: 80%
+	margin: 0 auto 20px
+	cursor: pointer
+	background:
+		color: orange
+		size: cover
+		position: center
+
+
+.con-head
+	width: 80px
+	height: 80px
+	background: 
+		size: cover
+		position: center
+	margin: 0 auto 20px
+	border-radius: 50%
+
+.face-unit
+	text-align: center
+
+
+.conversation-unit
+	display: flex
+	align-items: center
+	padding: 10px
+	border: 1px solid rgba($black, 0.2)
+	border-radius: 6px
+	cursor: pointer
+	margin-bottom: 20px
+	position: relative
+	&.unread
+		border: none
+		background: rgba($blue, 0.2)
+		.content .message
+			color: rgba($black, 0.4)
+		.content .text
+			color: rgba($black, 0.2)
+			text-transform: capitalize
+	.link
+		position: absolute
+		top: 10px
+		right: 20px
+		font-size: 12px
+		padding: 5px
+	.con-face
+		width: 50px
+		height: 50px
+		background:
+			size: cover
+			position: center
+		margin-right: 20px
+	.content
+		flex: 1
+	.content .message
+		font:
+			size: 18px
+		&.not-checked 
+			font-weight: 900
+
+.member-unit
+	padding: 20px
+	text-align: center
+	cursor: pointer
+	position: relative
+	border: 1px solid rgba($black, 0.2)
+	margin: 0px 20px 20px
+	.view
+		position: absolute
+		top: 10px
+		right: 20px
+	.member-face
+		width: 100px
+		height: 100px
+		margin: 0 auto 20px
+		background:
+			size: cover
+			position: center
+
+	.content .name
+		margin-bottom: 10px
+		text-transform: capitalize
+		font:
+			size: 18px
+			weight: 400
+	.link
+		display: inline-block
+		padding: 10px
+		font-size: 12px
+		background: $blue
+		width: 80%
+		color: white
+		text-transform: uppercase
+
+@media(max-width: 740px)
+	.col-sm-4 .face
+		display: none
+
+
+
